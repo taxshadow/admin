@@ -19,3 +19,4 @@ Route::get('/materi/{id}', 'MateriController@single');
 Route::get('/app/home', 'AdminController@home');
 Route::get('/app/artikel', 'AdminController@artikel');
 Route::get('/app', 'AdminController@login');
+Route::get('/app/user', 'AdminController@user');
