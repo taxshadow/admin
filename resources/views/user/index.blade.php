@@ -10,6 +10,5 @@
     @include('user.content')
     
 </div>
-</aside>
 
   @include('footer')
