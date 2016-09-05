@@ -1,5 +1,5 @@
 @include('css')
-@include('head')
+@include('navbar')
 @include('sitebar')
 
 <div class="content-wrapper">

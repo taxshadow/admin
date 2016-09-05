@@ -16,4 +16,6 @@ Route::get('/profil', 'ProfilController@index');
 Route::get('/materi', 'MateriController@show');
 Route::get('/materi/{id}', 'MateriController@single');
 
-Route::get('/app/home', 'AdminController@index');
+Route::get('/app/home', 'AdminController@home');
+Route::get('/app/artikel', 'AdminController@artikel');
+Route::get('/app/artikel', 'AdminController@login');

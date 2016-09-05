@@ -1,5 +1,5 @@
 @include('css')
-@include('head')
+@include('navbar')
 @include('sitebar')
 
 <div class="content-wrapper">
@@ -11,7 +11,7 @@
             <div class="box-header">
               <h3 class="box-title">Artikel</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="#" class="btn btn-primary btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="#" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
