@@ -3,7 +3,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Responsive Hover Table</h3>
+              <h3 class="box-title">User</h3>
 
               <div class="box-tools">
                 <a href=""><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
