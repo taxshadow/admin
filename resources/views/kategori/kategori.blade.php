@@ -11,7 +11,7 @@
             <div class="box-header">
               <h3 class="box-title">Kategori</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="#" class="btn btn-success btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{action('AdminController@insertkategori')}}" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
@@ -33,7 +33,7 @@
                 </tr>
                 <tr>
                   <td>219</td>
-                  <td>Politic</td>
+                  <td>Health</td>
                   <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
