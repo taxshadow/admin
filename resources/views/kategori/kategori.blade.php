@@ -26,7 +26,7 @@
                 <tr>
                   <td>183</td>
                   <td>Sport</td>
-                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
