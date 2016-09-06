@@ -6,7 +6,7 @@
               <h3 class="box-title">Responsive Hover Table</h3>
 
               <div class="box-tools">
-                <button type="button" class="btn btn btn-success btn-sm">Add</button>
+                <a href=""><button id="add" type="button" class="btn btn btn-success btn-sm">Add</button></a>
               </div>
             </div>
             <!-- /.box-header -->
@@ -23,7 +23,7 @@
                   <td>John Doe</td>
                   <td>11-7-2014</td>
                   <td>
-                    <button type="button" class="btn btn btn-primary btn-sm">Edit</button>
+                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
@@ -32,7 +32,7 @@
                   <td>Alexander Pierce</td>
                   <td>11-7-2014</td>
                   <td>
-                    <button type="button" class="btn btn btn-primary btn-sm">Edit</button>
+                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
@@ -41,7 +41,7 @@
                   <td>Bob Doe</td>
                   <td>11-7-2014</td>
                   <td>
-                    <button type="button" class="btn btn btn-primary btn-sm">Edit</button>
+                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
@@ -50,7 +50,7 @@
                   <td>Mike Doe</td>
                   <td>11-7-2014</td>
                   <td>
-                    <button type="button" class="btn btn btn-primary btn-sm">Edit</button>
+                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
@@ -62,4 +62,8 @@
         </div>
       </div>
         </section>  
+
+        <script src="/javascripts/application.js" type="text/javascript" charset="utf-8" async defer>
+        
+        </script>
           
