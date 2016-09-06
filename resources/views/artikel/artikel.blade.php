@@ -28,7 +28,7 @@
                   <td>183</td>
                   <td>John Doe</td>
                   <td>11-7-2014</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -37,7 +37,7 @@
                   <td>219</td>
                   <td>Alexander Pierce</td>
                   <td>11-7-2014</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -46,7 +46,7 @@
                   <td>657</td>
                   <td>Bob Doe</td>
                   <td>11-7-2014</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -55,7 +55,7 @@
                   <td>175</td>
                   <td>Mike Doe</td>
                   <td>11-7-2014</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
