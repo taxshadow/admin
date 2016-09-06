@@ -37,6 +37,6 @@
             </div>
           </div>
       </section>
-
+</div>
 
   @include('footer')

@@ -5,7 +5,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         
-        <li class="active treeview">
+        <li class="treeview">
           <a href="{{action('AdminController@home')}}">
             <i class="fa fa-dashboard"></i> <span>Home</span>
           </a>
