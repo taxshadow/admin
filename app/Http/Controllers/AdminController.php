@@ -22,6 +22,10 @@ class AdminController extends Controller
     }
 
     public function user(){
-    	return view('user.index');
+    	return view('user.user');
+    }
+
+    public function editUser(){
+        return view('user.edit');
     }
 }

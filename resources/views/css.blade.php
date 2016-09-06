@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="http://localhost/admin/dist/css/skins/_all-skins.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="http://localhost/admin/plugins/iCheck/square/blue.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/morris/morris.css">
   <!-- jvectormap -->
