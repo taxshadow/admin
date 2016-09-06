@@ -27,8 +27,8 @@ class AdminController extends Controller
 
     public function kategori(){
         return view('kategori.kategori');
-
+    }
     public function insertartikel(){
-        return view ('artikel.insertartikel');\
+        return view ('artikel.insertartikel');
     }
 }
