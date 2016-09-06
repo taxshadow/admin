@@ -26,7 +26,7 @@
                 <tr>
                   <td>183</td>
                   <td>Sport</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -34,7 +34,7 @@
                 <tr>
                   <td>219</td>
                   <td>Health</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -42,7 +42,7 @@
                 <tr>
                   <td>657</td>
                   <td>Technology</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
@@ -50,7 +50,7 @@
                 <tr>
                   <td>175</td>
                   <td>Entertainment</td>
-                  <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
+                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
                   
