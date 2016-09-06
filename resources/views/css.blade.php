@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="http://localhost/admin/plugins/iCheck/square/blue.css">
   <!-- Morris chart -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/morris/morris.css">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="http://localhost/admin/plugins/select2/select2.min.css">
   <!-- jvectormap -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
   <!-- Date Picker -->
@@ -30,7 +32,8 @@
   <link rel="stylesheet" href="http://localhost/admin/plugins/daterangepicker/daterangepicker.css">
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
-
+<!-- Select2 -->
+<script src="http://localhost/admin/plugins/select2/select2.full.min.js"></script>
 
  <!-- jQuery 2.2.3 -->
 <script src="http://localhost/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>

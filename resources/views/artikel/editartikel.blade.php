@@ -6,7 +6,7 @@
     <section class="content-header">
         <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Insert Artikel</h3>
+              <h3 class="box-title">Edit Artikel</h3>
             </div>
             <div class="box-body">
               <label>Nama</label>
@@ -36,7 +36,7 @@
           
             <!-- /.box-body -->
             <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Save</button>
             </div>
           </div>
       </section>

@@ -35,4 +35,7 @@ class AdminController extends Controller
     public function insertartikel(){
         return view ('artikel.insertartikel');
     }
+    public function editartikel(){
+        return view ('artikel.editartikel');
+    }
 }
