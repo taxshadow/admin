@@ -28,4 +28,11 @@ class AdminController extends Controller
     public function editUser(){
         return view('user.edit');
     }
+
+    public function kategori(){
+        return view('kategori.kategori');
+    }
+    public function insertartikel(){
+        return view ('artikel.insertartikel');
+    }
 }

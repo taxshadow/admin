@@ -12,9 +12,8 @@
         </li> 
 
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Kategori</span>
+          <a href="{{action('AdminController@kategori')}}">
+            <i class="fa fa-files-o"></i> <span>Kategori</span>
           </a>
           
         </li>

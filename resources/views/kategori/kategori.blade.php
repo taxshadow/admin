@@ -9,9 +9,9 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Artikel</h3>
+              <h3 class="box-title">Kategori</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{action('AdminController@insertartikel')}}" class="btn btn-success btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="#" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
@@ -19,15 +19,13 @@
               <table class="table table-hover">
                 <tr>
                   <th>ID</th>
-                  <th>Nama</th>
-                  <th>Kategori</th>
+                  <th>Nama Kategori</th>
                   <th>Menu</th>
                   
                 </tr>
                 <tr>
                   <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
+                  <td>Sport</td>
                   <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
@@ -35,8 +33,7 @@
                 </tr>
                 <tr>
                   <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
+                  <td>Politic</td>
                   <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
@@ -44,8 +41,7 @@
                 </tr>
                 <tr>
                   <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
+                  <td>Technology</td>
                   <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
@@ -53,8 +49,7 @@
                 </tr>
                 <tr>
                   <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
+                  <td>Entertainment</td>
                   <td><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
                   	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
                   </td>
