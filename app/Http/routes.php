@@ -22,3 +22,4 @@ Route::get('/app/artikel/insert', 'AdminController@insertartikel');
 Route::get('/app', 'AdminController@login');
 Route::get('/app/user', 'AdminController@user');
 Route::get('/app/kategori', 'AdminController@kategori');
+Route::get('/app/kategori/insert', 'AdminController@insertkategori');
