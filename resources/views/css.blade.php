@@ -30,7 +30,8 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="http://localhost/admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
-  <!-- jQuery 2.2.3 -->
+
+ <!-- jQuery 2.2.3 -->
 <script src="http://localhost/admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>

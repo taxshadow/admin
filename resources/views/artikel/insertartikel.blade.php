@@ -12,7 +12,16 @@
               <label>Nama</label>
               <input class="form-control" type="text" placeholder="Nama Artikel">
               <label>Kategori</label>
-              <input class="form-control" type="text" placeholder="Kategori">
+               <select class="form-control select2" style="width: 100%;">
+                  <option selected="selected"></option>
+                  <option>Alaska</option>
+                  <option>California</option>
+                  <option>Delaware</option>
+                  <option>Tennessee</option>
+                  <option>Texas</option>
+                  <option>Washington</option>
+                </select>
+              </div>
             </div>
 
             
