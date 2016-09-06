@@ -6,7 +6,7 @@
               <h3 class="box-title">Responsive Hover Table</h3>
 
               <div class="box-tools">
-                <a href=""><button id="add" type="button" class="btn btn btn-success btn-sm">Add</button></a>
+                <a href=""><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
               </div>
             </div>
             <!-- /.box-header -->
