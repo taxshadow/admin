@@ -6,7 +6,7 @@
     <section class="content-header">
         <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Edit Artikel</h3>
+              <h3 class="box-title">Insert Artikel</h3>
             </div>
             <div class="box-body">
               <label>Nama</label>
@@ -21,11 +21,8 @@
                   <option>Minuman</option>
                 </select>
               </div>
-            </div>
-
-            
-            <div class="box-header">
-              <label>Description</label>
+               <div class="box-header">
+                <label>Description</label>
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
@@ -40,8 +37,6 @@
             </div>
           </div>
       </section>
-  </div>
-
-
+</div>
 
   @include('footer')
