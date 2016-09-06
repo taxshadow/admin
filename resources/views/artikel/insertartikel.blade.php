@@ -21,11 +21,8 @@
                   <option>Minuman</option>
                 </select>
               </div>
-            </div>
-
-            
-            <div class="box-header">
-              <label>Description</label>
+               <div class="box-header">
+                <label>Description</label>
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
@@ -40,8 +37,6 @@
             </div>
           </div>
       </section>
-  </div>
-
 
 
   @include('footer')
