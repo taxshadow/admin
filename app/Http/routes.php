@@ -27,3 +27,4 @@ Route::get('/app/kategori/insert', 'AdminController@insertkategori');
 Route::get('/app/user/edit', 'AdminController@editUser');
 Route::get('/app/kategori', 'AdminController@kategori');
 Route::get('/app/kategori/edit', 'AdminController@editkategori');
+Route::get('/app/user/insert', 'AdminController@insertUser');
