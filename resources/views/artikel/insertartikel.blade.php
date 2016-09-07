@@ -22,7 +22,7 @@
                 </select>
               </div>
                <div class="box-header">
-                <label>Description</label>
+                <label>Deskripsi</label>
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
