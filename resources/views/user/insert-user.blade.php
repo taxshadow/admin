@@ -29,7 +29,7 @@
       </div>
       <div class="row">
         <div class="col-xs-4">
-          <a href="{{ action('AdminController@user')}}"><button type="button" class="btn btn-block btn-primary">Submit</button></a>
+          <a href="{{ action('UserController@show')}}"><button type="button" class="btn btn-block btn-primary">Submit</button></a>
         </div>
         <!-- /.col -->
       </div>

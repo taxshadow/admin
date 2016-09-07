@@ -23,7 +23,7 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="{{ action('AdminController@user')}}">
+          <a href="{{ action('UserController@show')}}">
             <i class="fa fa-pie-chart"></i>
             <span>User</span>
           </a>

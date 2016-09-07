@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\User;
 
 class AdminController extends Controller
 {
@@ -20,20 +19,6 @@ class AdminController extends Controller
 
     public function login(){
     	return view('login.login');
-    }
-
-    public function user(){
-        $user = User::all();
-
-        return view('user.user', compact('user'));
-    }
-
-    public function editUser(){
-        return view('user.edit');
-    }
-
-    public function insertUser(){
-        return view('user.insert');
     }
 
     public function kategori(){

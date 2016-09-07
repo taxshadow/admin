@@ -6,7 +6,7 @@
               <h3 class="box-title">User</h3>
 
               <div class="box-tools">
-                <a href="{{ action('AdminController@insertUser')}}"><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
+                <a href="{{ action('UserController@create')}}"><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
               </div>
             </div>
             <!-- /.box-header -->
@@ -24,7 +24,7 @@
                   <td>{{ $users->nama}}</td>
                   <td>{{ $users->email}}</td>
                   <td>
-                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
+                    <a href="{{ action('UserController@edit')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
