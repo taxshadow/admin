@@ -18,11 +18,11 @@
                   <th>Email</th>
                   <th>Menu</th>
                 </tr>
-                 @foreach($user as $users)
+                 @foreach($users as $user)
                 <tr>
-                  <td>{{ $users->user_id}}</td>
-                  <td>{{ $users->nama}}</td>
-                  <td>{{ $users->email}}</td>
+                  <td>{{ $user->user_id}}</td>
+                  <td>{{ $user->nama}}</td>
+                  <td>{{ $user->email}}</td>
                   <td>
                     <a href="app/user/edit"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>

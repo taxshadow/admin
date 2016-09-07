@@ -17,10 +17,8 @@ class UserController extends Controller
     public function index()
     {
         //
-        
         $user = User::all();
-
-        return view('user.user', compact('user'));
+        return view('user.user', ['users' => $user]);
     }
 
     /**
@@ -43,6 +41,16 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $user = new User;
+
+        $user->grup_id = $request->grup_id;
+        $user->nama = $request->nama;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->email = $request->email;
+
+        $user->save();
+        return redirect('app/user');
     }
 
     /**

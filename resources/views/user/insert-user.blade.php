@@ -2,20 +2,16 @@
   <div class="register-box-body">
     <p class="login-box-msg">Insert New membership</p>
 
-    <form method="post">
-      <div class="form-group has-feedback">
-        <input type="text" name="user_id" class="form-control" placeholder="User Id">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-      </div>
+    <form method="post" action="/admin/public/app/user">
       <div class="form-group">
-        <select class="form-control select2" data-placeholder="Select a State">
+        <select class="form-control select2" data-placeholder="Select a State" name="grup_id">
           <option>Grup ID</option>
-          <option>Alaska</option>
-          <option>California</option>
-          <option>Delaware</option>
-          <option>Tennessee</option>
-          <option>Texas</option>
-          <option>Washington</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
         </select>
       </div>
       <div class="form-group has-feedback">
@@ -36,7 +32,8 @@
       </div>
       <div class="row">
         <div class="col-xs-4">
-          <a href="{{ action('UserController@index')}}"><button type="button" class="btn btn-block btn-primary">Submit</button></a>
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <a href=""><button type="submit" name="name" class="btn btn-block btn-primary">Submit</button></a>
         </div>
         <!-- /.col -->
       </div>
