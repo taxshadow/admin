@@ -24,7 +24,7 @@
                   <td>{{ $users->nama}}</td>
                   <td>{{ $users->email}}</td>
                   <td>
-                    <a href="{{ action('UserController@edit')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
+                    <a href="app/user/edit"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
