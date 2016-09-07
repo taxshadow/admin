@@ -7,9 +7,16 @@
         <input type="text" name="user_id" class="form-control" placeholder="User Id">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback">
-        <input type="text" name="grup_id" class="form-control" placeholder="Grup Id">
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      <div class="form-group">
+        <select class="form-control select2" data-placeholder="Select a State" style="width: 100%;">
+          <option>Alabama</option>
+          <option>Alaska</option>
+          <option>California</option>
+          <option>Delaware</option>
+          <option>Tennessee</option>
+          <option>Texas</option>
+          <option>Washington</option>
+        </select>
       </div>
       <div class="form-group has-feedback">
         <input type="text" name="nama" class="form-control" placeholder="Nama">
