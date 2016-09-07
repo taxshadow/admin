@@ -38,3 +38,14 @@
 <script src="http://localhost/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="http://localhost/admin/dist/js/demo.js"></script>
+<!-- InputMask -->
+<script src="http://localhost/admin/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="http://localhost/admin/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="http://localhost/admin/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	//Initialize Select2 Elements
+    $(".select2").select2();
+});
+</script>

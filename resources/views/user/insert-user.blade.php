@@ -8,8 +8,8 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group">
-        <select class="form-control select2" data-placeholder="Select a State" style="width: 100%;">
-          <option>Alabama</option>
+        <select class="form-control select2" data-placeholder="Select a State">
+          <option>Grup ID</option>
           <option>Alaska</option>
           <option>California</option>
           <option>Delaware</option>
