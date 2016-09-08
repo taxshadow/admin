@@ -5,20 +5,20 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         
-        <li class="treeview">
+        <li class="">
           <a href="{{action('AdminController@home')}}">
             <i class="fa fa-dashboard"></i> <span>Home</span>
           </a>
         </li> 
 
-        <li class="treeview">
-          <a href="{{action('AdminController@kategori')}}">
+        <li class="">
+          <a href="{{action('KategoriController@index')}}">
             <i class="fa fa-files-o"></i> <span>Kategori</span>
           </a>
           
         </li>
         <li>
-          <a href="{{action('AdminController@artikel')}}">
+          <a href="{{action('ArtikelController@index')}}">
             <i class="fa fa-th"></i> <span>Artikel</span>
           </a>
         </li>

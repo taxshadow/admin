@@ -11,7 +11,7 @@
             <div class="box-header">
               <h3 class="box-title">Kategori</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{action('AdminController@insertkategori')}}" class="btn btn-success btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="/admin/public/app/kategori/create" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
@@ -20,41 +20,26 @@
                 <tr>
                   <th>ID</th>
                   <th>Nama Kategori</th>
+                  <th>Induk Kategori</th>
                   <th>Menu</th>
                   
                 </tr>
+                @foreach($kategori as $kategori)
                 <tr>
-                  <td>183</td>
-                  <td>Sport</td>
-                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
+                  <td>{{$kategori->id}}</td>
+                  <td>{{$kategori->namakategori}}</td>
+                  <td>{{$kategori->indukkategori}}</td>
+                  <td><a href="/admin/public/app/kategori/{{$kategori->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                  	  
+                      <form style="margin-left: 53px; margin-top: -23px;" class="" action="/admin/public/app/kategori/{{$kategori->id}}" method="post">
+                      <input type ="hidden" name="_method" value="delete">
+                      <input type="hidden" name="_token" value="{{csrf_token()}}">
+                      <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>
+                      </form>
                   </td>
                   
                 </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Health</td>
-                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Technology</td>
-                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Entertainment</td>
-                  <td><a href="{{action('AdminController@editkategori')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
+                @endforeach
               </table>
             </div>
             <!-- /.box-body -->
@@ -66,6 +51,6 @@
     
     </div>
   </aside>
-
-  @include('footer')
+  
   @include('js')
+  @include('footer')
