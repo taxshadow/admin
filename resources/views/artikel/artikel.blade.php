@@ -11,57 +11,40 @@
             <div class="box-header">
               <h3 class="box-title">Artikel</h3>
               <div class="box-tools">
-        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="{{action('AdminController@insertartikel')}}" class="btn btn-success btn-lg"> Insert</a>
+        		<a style="padding: 0px 19px 4px; border-bottom-width: 1px;" href="/admin/public/app/artikel/create" class="btn btn-success btn-lg"> Insert</a>
    	         </div>
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive no-padding">
+              
               <table class="table table-hover">
                 <tr>
                   <th>ID</th>
-                  <th>Nama</th>
+                  <th>Judul Artikel</th>
                   <th>Kategori</th>
                   <th>Menu</th>
                   
                 </tr>
+                @foreach($artikels as $artikel)
                 <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
-                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
+                  <td>{{$artikel->id}}</td>
+                  <td>{{$artikel->judulartikel}}</td>
+                  <td>{{$artikel->kategori}}</td>
+                  <td><a href="/admin/public/app/artikel/{{$artikel->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                      
+                      <form style="margin-left: 53px; margin-top: -23px;" class="" action="/admin/public/app/artikel/{{$artikel->id}}" method="post">
+                      <input type ="hidden" name="_method" value="delete">
+                      <input type="hidden" name="_token" value="{{csrf_token()}}">
+                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>
+                      </form>
                   </td>
                   
                 </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td><a href="{{ action('AdminController@editartikel')}}"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
-                  	  <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" class="btn btn-danger">Delete</button>
-                  </td>
-                  
-                </tr>
+                @endforeach
               </table>
+              
             </div>
+            
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
@@ -70,6 +53,5 @@
 
     
     </div>
-  </aside>
 
   @include('footer')
