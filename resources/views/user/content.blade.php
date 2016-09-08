@@ -3,10 +3,10 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Responsive Hover Table</h3>
+              <h3 class="box-title">User</h3>
 
               <div class="box-tools">
-                <a href=""><button id="add" type="button" class="btn btn btn-success btn-sm">Add</button></a>
+                <a href="{{ action('UserController@create')}}"><button id="add" type="button" class="btn btn btn-success btn-sm">Insert</button></a>
               </div>
             </div>
             <!-- /.box-header -->
@@ -18,42 +18,18 @@
                   <th>Email</th>
                   <th>Menu</th>
                 </tr>
+                 @foreach($users as $user)
                 <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
+                  <td>{{ $user->user_id}}</td>
+                  <td>{{ $user->nama}}</td>
+                  <td>{{ $user->email}}</td>
                   <td>
-                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
+                    <a href="app/user/edit"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
                     <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
                   </td>
                 </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td>
-                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
-                    <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td>
-                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
-                    <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
-                  </td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td>
-                    <a href="{{ action('AdminController@editUser')}}"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
-                    <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
-                  </td>
-                </tr>
+                @endforeach
+
               </table>
             </div>
             <!-- /.box-body -->

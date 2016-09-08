@@ -3,7 +3,11 @@
 @include('sitebar')
 
 <div class="content-wrapper">
-    @include('user.content')
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      
+    </section>
+    @include('user.insert-user')
     
 </div>
 

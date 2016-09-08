@@ -21,12 +21,12 @@ Route::get('/app/home', 'AdminController@home');
 // Route::get('/app/artikel/insert', 'AdminController@insertartikel');
 // Route::get('/app/artikel/edit', 'AdminController@editartikel');
 Route::get('/app', 'AdminController@login');
-Route::get('/app/user', 'AdminController@user');
 Route::get('/app/kategori', 'AdminController@kategori');
 Route::get('/app/kategori/insert', 'AdminController@insertkategori');
-Route::get('/app/user/edit', 'AdminController@editUser');
+Route::get('/app/user/edit', 'UserController@edit');
 Route::get('/app/kategori', 'AdminController@kategori');
 Route::get('/app/kategori/edit', 'AdminController@editkategori');
+
 
 
 Route::group(['middleware' => ['web']], function () {
@@ -35,3 +35,10 @@ Route::group(['middleware' => ['web']], function () {
 });
 
 
+=======
+Route::get('/app/user/insert', 'UserController@create');
+
+Route::group(['middleware' => ['web']], function () {
+    //
+    Route::resource('app/user', 'UserController');
+});
