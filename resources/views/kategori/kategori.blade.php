@@ -68,3 +68,4 @@
   </aside>
 
   @include('footer')
+  @include('js')
