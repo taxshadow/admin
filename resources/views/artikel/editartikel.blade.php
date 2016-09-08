@@ -44,4 +44,5 @@
       </section>
 </div>
 
+  @include('js')
   @include('footer')

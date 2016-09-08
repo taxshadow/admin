@@ -54,4 +54,5 @@
     
     </div>
 
+  @include('js')
   @include('footer')

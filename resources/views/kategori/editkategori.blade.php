@@ -15,7 +15,7 @@
               <label>Nama Kategori</label>
               <input class="form-control" name="namakategori" value="{{$kategori->namakategori}}" type="text" placeholder="Nama Kategori">
               <label>Induk Kategori</label>
-                  <select class="form-control select2" style="width: 100%;" name="indukkategori" value="{{$kategori->namakategori}}">
+                  <select class="form-control select2" style="width: 100%;" name="indukkategori">
                   <option selected="selected" name="indukkategori"></option>
                   <option >Entertainment</option>
                   <option >Technologi</option>
@@ -37,5 +37,5 @@
   </div>
 
 
-
+  @include('js')
   @include('footer')

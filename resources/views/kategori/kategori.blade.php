@@ -51,5 +51,6 @@
     
     </div>
   </aside>
-
+  
+  @include('js')
   @include('footer')
