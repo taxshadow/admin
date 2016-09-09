@@ -19,7 +19,7 @@
             </div>
 
               <label>Induk Kategori</label>
-              <div class="form-group {{ $errors->has('namakategori') ? 'has-error' : ''}}">
+              <div class="form-group {{ $errors->has('indukkategori') ? 'has-error' : ''}}">
                   <select class="form-control select2" style="width: 100%;" name="indukkategori">
                   <option selected="selected" name="indukkategori"></option>
                   <option >Entertainment</option>
