@@ -24,12 +24,11 @@
                   <option>Minuman</option>
                 </select>
               </div>
-               <div class="box-header">
-                <label>Deskripsi</label>
-            </div>
+          
             <!-- /.box-header -->
             <div class="box-body pad">
-                <textarea class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              <label>Deskripsi</label>
+                <textarea value="{{$artikel->deskripsi}}" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                 <input type="hidden" name="_method" value="put">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
             </div>

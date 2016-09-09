@@ -42,12 +42,14 @@ class ArtikelController extends Controller
         $this->validate($request, [
         'judulartikel' => 'required',
         'kategori' => 'required',
+        'deskripsi' => 'required',
         ]);
 
         $artikels = new Artikel;
 
         $artikels->judulartikel = $request->judulartikel;
         $artikels->kategori = $request->kategori;
+        $artikels->deskripsi = $request->deskripsi;
         $artikels->save();
         return redirect('app/artikel');
     

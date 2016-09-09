@@ -23,11 +23,9 @@ Route::get('/app/kategori/insert', 'AdminController@insertkategori');
 Route::get('/app/user/edit', 'UserController@edit');
 Route::get('/app/kategori', 'AdminController@kategori');
 Route::get('/app/kategori/edit', 'AdminController@editkategori');
+Route::resource('app/kategori', 'KategoriController');
+Route::resource('app/artikel', 'ArtikelController');
 
-Route::group(['middleware' => ['web']], function () {
-	Route::resource('app/artikel', 'ArtikelController');
-	Route::resource('app/kategori', 'KategoriController');
-});
 
 Route::get('/app/user/insert', 'UserController@create');
 

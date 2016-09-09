@@ -13,15 +13,22 @@
             <form class="" action="/admin/public/app/kategori" method="post">
             <div class="box-body">
               <label>Nama Kategori</label>
-              <input class="form-control" name="namakategori" type="text" placeholder="Nama Kategori">
+              <div class="form-group {{ $errors->has('namakategori') ? 'has-error' : ''}}">
+              <input class="form-control" name="namakategori" type="text" placeholder="Nama Kategori"> 
+              {{($errors->has('namakategori')) ? $errors->first('namakategori') : ''}}
+            </div>
+
               <label>Induk Kategori</label>
+              <div class="form-group {{ $errors->has('namakategori') ? 'has-error' : ''}}">
                   <select class="form-control select2" style="width: 100%;" name="indukkategori">
                   <option selected="selected" name="indukkategori"></option>
                   <option >Entertainment</option>
                   <option >Technologi</option>
                   <option >Health</option>
                   <option >Sport</option>
-                  </select>   
+                  </select>
+              {{($errors->has('indukkategori')) ? $errors->first('indukkategori') : ''}} 
+              </div> 
             </div>
             
             <!-- /.box-body -->
