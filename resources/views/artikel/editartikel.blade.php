@@ -5,6 +5,11 @@
   <div class="content-wrapper">      
     <section class="content-header">
         <div class="box box-primary">
+              @if(Session::has('message'))
+                <div class="callout callout-info">
+                {{ Session::get('message') }}
+                </div>
+              @endif
             <div class="box-header with-border">
               <h3 class="box-title">Edit Artikel</h3>
             </div>
