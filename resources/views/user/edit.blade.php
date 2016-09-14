@@ -14,18 +14,22 @@
 		    <p class="login-box-msg">Edit membership</p>
 
 		    <form action="/admin/public/app/user/{{$user->user_id}}" method="post">
+		    	<label>Nama</label>
 		      <div class="form-group has-feedback">
 		        <input type="text" class="form-control" name="nama" value="{{$user->nama}}" placeholder="nama">
 		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
 		      </div>
+		      <label>Username</label>
 		      <div class="form-group has-feedback">
 		        <input type="text" class="form-control" name="username" value="{{$user->username}}" placeholder="username">
 		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
 		      </div>
+		      <label>Email</label>
 		      <div class="form-group has-feedback">
 		        <input type="email" class="form-control" name="email" value="{{$user->email}}" placeholder="email">
 		        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 		      </div>
+		      <label>Password</label>
 		      <div class="form-group has-feedback">
 		        <input type="password" class="form-control" name="password" value="{{$user->password}}" placeholder="password">
 		        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
