@@ -25,3 +25,11 @@ Route::get('/app/kategori/edit', 'AdminController@editkategori');
 Route::resource('app/kategori', 'KategoriController');
 Route::resource('app/artikel', 'ArtikelController');
 Route::resource('app/user', 'UserController');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');

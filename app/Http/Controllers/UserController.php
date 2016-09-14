@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\User;
+use App\Users;
 
 class UserController extends Controller
 {
@@ -17,7 +17,7 @@ class UserController extends Controller
     public function index()
     {
         //
-        $user = User::all();
+        $user = Users::all();
         return view('user.user', ['users' => $user]);
     }
 
@@ -48,7 +48,7 @@ class UserController extends Controller
         'password' => 'required',
         ));
 
-        $user = new User;
+        $user = new Users;
 
         $user->nama = $request->nama;
         $user->username = $request->username;
@@ -79,7 +79,7 @@ class UserController extends Controller
     public function edit($user_id)
     {
         //
-        $user = User::find($user_id);
+        $user = Users::find($user_id);
 
         return view('user.edit')->with('user', $user);
     }
@@ -94,7 +94,7 @@ class UserController extends Controller
     public function update(Request $request, $user_id)
     {
         //
-        $user = User::find($user_id);
+        $user = Users::find($user_id);
 
         $user->nama = $request->nama;
         $user->username = $request->username;
@@ -115,7 +115,7 @@ class UserController extends Controller
     {
         //
         // die('hard');
-        $user = User::find($user_id);
+        $user = Users::find($user_id);
         $user->delete();
         return redirect('app/user');
     }
