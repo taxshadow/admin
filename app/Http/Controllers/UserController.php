@@ -41,9 +41,15 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $this->validate($request, array(
+        'nama' => 'required',
+        'username' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+        ));
+
         $user = new User;
 
-        $user->grup_id = $request->grup_id;
         $user->nama = $request->nama;
         $user->username = $request->username;
         $user->password = $request->password;
@@ -67,35 +73,50 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($user_id)
     {
         //
-        return view('user.edit');
+        $user = User::find($user_id);
+
+        return view('user.edit')->with('user', $user);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
         //
+        $user = User::find($user_id);
+
+        $user->nama = $request->nama;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = $request->password;
+
+        $user->save();
+        return redirect('app/user');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user_id)
     {
         //
+        // die('hard');
+        $user = User::find($user_id);
+        $user->delete();
+        return redirect('app/user');
     }
 }

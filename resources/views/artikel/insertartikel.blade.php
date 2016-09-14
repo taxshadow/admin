@@ -13,10 +13,15 @@
             <form class="" action="/admin/public/app/artikel" method="post">
             <div class="box-body">
               <label>Nama</label>
+
+              <div class="form-group {{ $errors->has('judulartikel') ? 'has-error' : ''}}">
               <input class="form-control" name="judulartikel" type="text" placeholder="Nama Artikel">
               {{($errors->has('judulartikel')) ? $errors->first('judulartikel') : ''}}
+              </div>
+
               <label>Kategori</label>
-               <select class="form-control select2" style="width: 100%;" name="kategori">
+                <div class="form-group {{ $errors->has('kategori') ? 'has-error' : ''}}">
+                <select class="form-control select2" style="width: 100%;" name="kategori">
                   <option selected="selected" name="kategori"></option>
                   <option>Olahraga</option>
                   <option>politik</option>
@@ -25,12 +30,15 @@
                   <option>Minuman</option>
                 </select>
                 {{($errors->has('kategori')) ? $errors->first('kategori') : ''}}
+                </div>
               </div>
             <!-- /.box-header -->
             <div class="box-body pad">
               <label>Deskripsi</label>
+              <div class="form-group {{ $errors->has('deskripsi') ? 'has-error' : ''}}">
                 <textarea class="textarea" placeholder="Place some text here" name="deskripsi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                 {{($errors->has('deskripsi')) ? $errors->first('deskripsi') : ''}}
+              </div>
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
             </div>
             
