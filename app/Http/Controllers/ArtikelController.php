@@ -51,7 +51,7 @@ class ArtikelController extends Controller
         $artikels->kategori = $request->kategori;
         $artikels->deskripsi = $request->deskripsi;
         $artikels->save();
-        return redirect('app/artikel');
+        return redirect('app/artikel')->with('message','Artikel sudah berhasil ditambahkan');
     
 
     }
@@ -99,7 +99,7 @@ class ArtikelController extends Controller
         $artikel->judulartikel = $request->judulartikel;
         $artikel->kategori = $request->kategori;
         $artikel->save();
-        return redirect('app/artikel');
+        return redirect('app/artikel')->with('message','Artikel sudah berhasil diupdate');
     }
 
     /**
@@ -112,6 +112,6 @@ class ArtikelController extends Controller
     {
         $artikel = Artikel::find($id);
         $artikel->delete();
-        return redirect('app/artikel');
+        return redirect('app/artikel')->with('message','Artikel sudah berhasil dihapus');
     }
 }

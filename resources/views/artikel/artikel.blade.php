@@ -8,6 +8,11 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="box">
+              @if(Session::has('message'))
+                <div class="callout callout-info">
+                {{ Session::get('message') }}
+                </div>
+              @endif
             <div class="box-header">
               <h3 class="box-title">Artikel</h3>
               <div class="box-tools">

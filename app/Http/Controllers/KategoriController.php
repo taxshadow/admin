@@ -48,8 +48,9 @@ class KategoriController extends Controller
 
         $kategori->namakategori = $request->namakategori;
         $kategori->indukkategori = $request->indukkategori;
+
         $kategori->save();
-        return redirect('app/kategori');
+        return redirect('app/kategori')->with('message','Kategori sudah berhasil ditambahkan');
     }
 
     /**
@@ -94,8 +95,9 @@ class KategoriController extends Controller
 
         $kategori->namakategori = $request->namakategori;
         $kategori->indukkategori = $request->indukkategori;
+
         $kategori->save();
-        return redirect('app/kategori');
+        return redirect('app/kategori')->with('message','Kategori sudah berhasil diupdate');
     }
 
     /**
@@ -108,6 +110,6 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::find($id);
         $kategori->delete();
-        return redirect('app/kategori');
+        return redirect('app/kategori')->with('message','Kategori sudah berhasil dihapus');
     }
 }
