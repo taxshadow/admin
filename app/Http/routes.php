@@ -20,24 +20,8 @@ Route::get('/materi/{id}', 'MateriController@single');
 Route::get('/app/home', 'AdminController@home');
 Route::get('/app', 'AdminController@login');
 
-Route::get('/app/kategori', 'AdminController@kategori');
-Route::get('/app/kategori/insert', 'AdminController@insertkategori');
-Route::get('/app/kategori', 'AdminController@kategori');
-Route::get('/app/kategori/edit', 'AdminController@editkategori');
-
 Route::resource('app/kategori', 'KategoriController');
 Route::resource('app/artikel', 'ArtikelController');
 Route::resource('app/user', 'UserController');
 
-Route::auth();
-
-Route::group(['middleware' => ['web']], function () {
-   
-});
-
-Route::get('/home', 'HomeController@index');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
 
