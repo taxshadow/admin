@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-
-use App\User;
 use Illuminate\Support\Facades\Auth;
-
 use App\Users;
 
 
@@ -22,8 +18,8 @@ class UserController extends Controller
     public function index()
     {
         
-        $user = Users::all();
-        return view('user.user', ['users' => $user]);
+        $users = Users::all();
+        return view('user.user', ['users' => $users]);
     }
 
     /**
@@ -46,21 +42,8 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
-        $user = new User;
-        $user->name_ = $request->name_;
-
-        $this->validate($request, array(
-        'nama' => 'required',
-        'username' => 'required',
-        'email' => 'required',
-        'password' => 'required',
-        ));
-
-        // $user = new Users;
-        // $user->nama = $request->nama;
-
-        $user = new User;
-        $user->name_ = $request->name_;
+        $user = new Users;
+        $user->name = $request->name;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
@@ -89,7 +72,7 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = Users::find($id);
         return view('user.edit')->with('user', $user);;
     // public function edit($user_id)
     // {
@@ -107,11 +90,11 @@ class UserController extends Controller
      * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
 
-        $user = User::find($id);;
-        $user->name_ = $request->name_;
+        $user = Users::find($id);;
+        $user->name = $request->name;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
@@ -135,10 +118,10 @@ class UserController extends Controller
      * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($user_id)
+    public function destroy($id)
     {
 
-        $user = User::find($id);
+        $user = Users::find($id);
         $user->delete();
         return redirect('app/user');
     }
