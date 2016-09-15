@@ -4,18 +4,10 @@
 
     <form method="post" action="/admin/public/app/user">
       <div class="form-group">
-        <select class="form-control select2" data-placeholder="Select a State" name="grup_id">
-          <option>Grup ID</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-          <option>6</option>
-        </select>
+
       </div>
       <div class="form-group has-feedback">
-        <input type="text" name="nama" class="form-control" placeholder="Nama">
+        <input type="text" name="name_" class="form-control" placeholder="Name">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
@@ -23,7 +15,7 @@
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="text" name="password" class="form-control" placeholder="Password">
+        <input type="password" name="password" class="form-control" placeholder="Password">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

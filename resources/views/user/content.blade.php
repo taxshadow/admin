@@ -20,12 +20,16 @@
                 </tr>
                  @foreach($users as $user)
                 <tr>
-                  <td>{{ $user->user_id}}</td>
-                  <td>{{ $user->nama}}</td>
+                  <td>{{ $user->id}}</td>
+                  <td>{{ $user->username}}</td>
                   <td>{{ $user->email}}</td>
-                  <td>
-                    <a href="app/user/edit"><button type="button" class="btn btn btn-primary btn-sm">Edit</button></a>
-                    <button type="button" class="btn btn btn-danger btn-sm">Delete</button>
+                  <td><a href="/admin/public/app/user/{{$user->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
+                      
+                      <form style="margin-left: 53px; margin-top: -23px;" class="" action="/admin/public/app/user/{{$user->id}}" method="post">
+                      <input type ="hidden" name="_method" value="delete">
+                      <input type="hidden" name="_token" value="{{csrf_token()}}">
+                      <button style="padding-top: 0px; padding-bottom: 0px;" type="submit" value="delete" class="btn btn-danger">Delete</button>
+                      </form>
                   </td>
                 </tr>
                 @endforeach

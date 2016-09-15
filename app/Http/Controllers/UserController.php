@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -42,9 +43,7 @@ class UserController extends Controller
     {
         //
         $user = new User;
-
-        $user->grup_id = $request->grup_id;
-        $user->nama = $request->nama;
+        $user->name_ = $request->name_;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
@@ -70,10 +69,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        //
-        return view('user.edit');
+        $user = User::find($id);
+        return view('user.edit')->with('user', $user);;
     }
 
     /**
@@ -85,7 +84,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);;
+        $user->name_ = $request->name_;
+        $user->username = $request->username;
+        $user->password = $request->password;
+        $user->email = $request->email;
+
+        $user->save();
+        return redirect('app/user');
     }
 
     /**
@@ -96,6 +102,16 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect('app/user');
+    }
+
+    public function SignIn(Request $request)
+    {
+        if(Auth::attempt(['email' => $request['email'], 'password' => $request['password']])){
+            return redirect('/app/home');
+        }
+        return redirect()->back();
     }
 }

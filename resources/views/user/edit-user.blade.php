@@ -6,26 +6,28 @@
   <div class="register-box-body">
     <p class="login-box-msg">Edit membership</p>
 
-    <form action="../../index.html" method="post">
+    <form action="/admin/public/app/user/{{$user->id}}" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name">
+        <input type="text" name="name_"  value="{{$user->name_}}"class="form-control" placeholder="Name">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="text" name="username" value="{{$user->username}}" class="form-control" placeholder="Username">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="password" value="{{$user->password}}" class="form-control" placeholder="Password">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="email" name="email" value="{{$user->email}}" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password">
-        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
-      </div>
+      <input type="hidden" name="_method" value="put">
       <div class="row">
-        <div class="col-xs-4">
-          <a href="{{ action('UserController@index')}}"><button type="button" class="btn btn-block btn-primary">Submit</button></a>
+        <div class="box-footer">
+                <input type="hidden" name="_token" value="{{csrf_token()}}">
+                <button type="submit" value="edit" class="btn btn-primary">Submit</button>
         </div>
         <!-- /.col -->
       </div>

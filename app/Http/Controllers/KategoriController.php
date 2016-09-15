@@ -39,10 +39,10 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, array(
+        $this->validate($request, [
         'namakategori' => 'required',
         'indukkategori' => 'required',
-        ));
+        ]);
 
         $kategori = new Kategori;
 
