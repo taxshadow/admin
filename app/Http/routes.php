@@ -10,6 +10,9 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/profil', 'ProfilController@index');
@@ -25,10 +28,6 @@ Route::get('/app/kategori/edit', 'AdminController@editkategori');
 Route::resource('app/kategori', 'KategoriController');
 Route::resource('app/artikel', 'ArtikelController');
 Route::resource('app/user', 'UserController');
-
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
 
 Route::auth();
 

@@ -73,13 +73,13 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $user_id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($user_id)
+    public function edit($id)
     {
         //
-        $user = Users::find($user_id);
+        $user = Users::find($id);
 
         return view('user.edit')->with('user', $user);
     }
@@ -88,13 +88,13 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $user_id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $user_id)
+    public function update(Request $request, $id)
     {
         //
-        $user = Users::find($user_id);
+        $user = Users::find($id);
 
         $user->nama = $request->nama;
         $user->username = $request->username;
@@ -108,14 +108,14 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $user_id
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($user_id)
+    public function destroy($id)
     {
         //
         // die('hard');
-        $user = Users::find($user_id);
+        $user = Users::find($id);
         $user->delete();
         return redirect('app/user');
     }
