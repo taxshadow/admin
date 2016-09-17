@@ -10,30 +10,26 @@
 		    <p class="login-box-msg">Insert New membership</p>
 
 		    <form method="post" action="/admin/public/app/user">
-		      <label>Nama</label>
-		      <div class="form-group {{ $errors->has('nama') ? 'has-error' : ''}}">
-		        <input type="text" name="nama" class="form-control" placeholder="Nama">
-		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-		        {{($errors->has('nama')) ? $errors->first('nama') : ''}}
-		      </div>
-		      <label>Username</label>
-		      <div class="form-group {{ $errors->has('username') ? 'has-error' : ''}}">
-		        <input type="text" name="username" class="form-control" placeholder="Username">
-		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-		        {{($errors->has('username')) ? $errors->first('username') : ''}}
-		      </div>
-		      <label>Email</label>
-		      <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
-		        <input type="email" name="email" class="form-control" placeholder="Email">
-		        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-		        {{($errors->has('email')) ? $errors->first('email') : ''}}
-		      </div>
-		      <label>Password</label>
-		      <div class="form-group {{ $errors->has('password') ? 'has-error' : ''}}">
-		        <input type="password" name="password" class="form-control" placeholder="Password">
-		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-		        {{($errors->has('password')) ? $errors->first('password') : ''}}
-		      </div>
+		    <label>Nama</label>
+			<div class="form-group has-feedback">
+			        <input type="text" name="name" class="form-control" placeholder="Name">
+			        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+			 </div>
+			 <label>Username</label>
+		     <div class="form-group has-feedback">
+		        	<input type="text" name="username" class="form-control" placeholder="Username">
+		        	<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		     </div>
+		     <label>Email</label>
+		     <div class="form-group has-feedback">
+		        	<input type="email" name="email" class="form-control" placeholder="Email">
+		        	<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+		     </div>
+		     <label>Password</label>
+		     <div class="form-group has-feedback">
+		        	<input type="password" name="password" class="form-control" placeholder="Password">
+		        	<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		     </div>
 		      <div class="row">
 		        <div class="col-xs-4">
 		          <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -48,5 +44,6 @@
 		<!-- /.register-box -->
     </section>    
 </div>
+
   @include('footer')
   @include('js')

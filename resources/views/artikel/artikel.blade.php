@@ -50,6 +50,12 @@
                 @endforeach
               </table>
               
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                <li>{!! $artikels->links() !!}</a></li>
+              </ul>
+            </div>
+
             </div>
             
             <!-- /.box-body -->

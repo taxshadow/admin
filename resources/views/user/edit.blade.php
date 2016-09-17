@@ -6,34 +6,29 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
 		<div class="register-box">
-		  <div class="register-logo">
-		    <a href="../../index2.html"><b>Admin</b>LTE</a>
-		  </div>
-
 		  <div class="register-box-body">
 		    <p class="login-box-msg">Edit membership</p>
-
-		    <form action="/admin/public/app/user/{{$user->user_id}}" method="post">
-		    	<label>Nama</label>
-		      <div class="form-group has-feedback">
-		        <input type="text" class="form-control" name="nama" value="{{$user->nama}}" placeholder="nama">
-		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-		      </div>
-		      <label>Username</label>
-		      <div class="form-group has-feedback">
-		        <input type="text" class="form-control" name="username" value="{{$user->username}}" placeholder="username">
-		        <span class="glyphicon glyphicon-user form-control-feedback"></span>
-		      </div>
-		      <label>Email</label>
-		      <div class="form-group has-feedback">
-		        <input type="email" class="form-control" name="email" value="{{$user->email}}" placeholder="email">
-		        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-		      </div>
-		      <label>Password</label>
-		      <div class="form-group has-feedback">
-		        <input type="password" class="form-control" name="password" value="{{$user->password}}" placeholder="password">
-		        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-		      </div>
+		    <form action="/admin/public/app/user/{{$user->id}}" method="post">
+		    <label>Nama</label>
+			<div class="form-group has-feedback">
+			        <input type="text" name="name" value="{{$user->name}}" class="form-control" placeholder="Name">
+			        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+			 </div>
+			 <label>Username</label>
+		     <div class="form-group has-feedback">
+		        	<input type="text" name="username" value="{{$user->username}}"  class="form-control" placeholder="Username">
+		        	<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		     </div>
+		     <label>Email</label>
+		     <div class="form-group has-feedback">
+		        	<input type="email" name="email" value="{{$user->email}}" class="form-control" placeholder="Email">
+		        	<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+		     </div>
+		     <label>Password</label>
+		     <div class="form-group has-feedback">
+		        	<input type="password" name="password" value="{{$user->password}}" class="form-control" placeholder="Password">
+		        	<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		     </div>
 		      <div class="row">
 		        <div class="col-xs-4">
 		          <input type="hidden" name="_method" value="put">
@@ -49,5 +44,6 @@
 		<!-- /.register-box -->
     </section>    
 </div>
+
   @include('footer')
   @include('js')
