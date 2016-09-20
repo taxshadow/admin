@@ -43,7 +43,7 @@ class UserController extends Controller
     {
 
         $user = new Users;
-        $user->name = $request->name;
+        $user->nama = $request->nama;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
@@ -66,12 +66,12 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($user_id)
     {
-        $user = Users::find($id);
+        $user = Users::find($user_id);
         return view('user.edit')->with('user', $user);;
     // public function edit($user_id)
     // {
@@ -86,15 +86,15 @@ class UserController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $user_id)
     {
-        $user = Users::find($id);
+        $user = Users::find($user_id);
 
-        $user = Users::find($id);;
-        $user->name = $request->name;
+        $user = Users::find($user_id);;
+        $user->nama = $request->nama;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
@@ -115,15 +115,15 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $user_id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($user_id)
     {
         // die('hard');
-        $user = Users::find($id);
+        $user = Users::find($user_id);
 
-        $user = Users::find($id);
+        $user = Users::find($user_id);
         $user->delete();
         return redirect('app/user');
     }

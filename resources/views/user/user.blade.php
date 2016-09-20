@@ -25,8 +25,8 @@
                     </tr>
                      @foreach($users as $user)
                     <tr>
-                      <td>{{$user->id}}</td>
-                      <td>{{$user->name}}</td>
+                      <td>{{$user->user_id}}</td>
+                      <td>{{$user->nama}}</td>
                       <td>{{$user->email}}</td>
                       <td><a href="/admin/public/app/user/{{$user->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                       
