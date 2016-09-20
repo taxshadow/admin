@@ -15,7 +15,7 @@
               <label>Nama</label>
 
               <div class="form-group {{ $errors->has('judulartikel') ? 'has-error' : ''}}">
-              <input class="form-control" name="judulartikel" type="text" placeholder="Nama Artikel">
+              <input class="form-control" name="judulartikel" type="text" value="{{ Request::old('judulartikel') }}" placeholder="Nama Artikel">
               {{($errors->has('judulartikel')) ? $errors->first('judulartikel') : ''}}
               </div>
 
