@@ -20,16 +20,13 @@
               </div>
 
               <label>Kategori</label>
-                <div class="form-group {{ $errors->has('kategori') ? 'has-error' : ''}}">
-                <select class="form-control select2" style="width: 100%;" name="kategori">
-                  <option selected="selected" name="kategori"></option>
-                  <option>Olahraga</option>
-                  <option>politik</option>
-                  <option>Kesehatan</option>
-                  <option>Makanan</option>
-                  <option>Minuman</option>
+                <div class="form-group {{ $errors->has('kategori_id') ? 'has-error' : ''}}">
+                <select class="form-control select2" style="width: 100%;" name="kategori_id">
+                    @foreach($kategoris as $value)
+                      <option value="{{ $value->id }}">{{ $value->namakategori }}</option>
+                    @endforeach
                 </select>
-                {{($errors->has('kategori')) ? $errors->first('kategori') : ''}}
+                {{($errors->has('kategori_id')) ? $errors->first('kategori_id') : ''}}
                 </div>
               </div>
             <!-- /.box-header -->

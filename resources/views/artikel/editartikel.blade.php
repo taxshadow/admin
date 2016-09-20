@@ -20,20 +20,17 @@
               <label>Nama</label>
               <input class="form-control" name="judulartikel" value="{{$artikel->judulartikel}}" type="text" placeholder="Nama Artikel">
               <label>Kategori</label>
-               <select class="form-control select2" style="width: 100%;" name="kategori">
-                  <option selected="selected" name="kategori" value="{{$artikel->kategori}}"></option>
-                  <option>Olahraga</option>
-                  <option>politik</option>
-                  <option>Kesehatan</option>
-                  <option>Makanan</option>
-                  <option>Minuman</option>
+               <select class="form-control select2" style="width: 100%;" name="kategori_id" value="{{$artikel->kategori_id}}">
+               @foreach($kategoris as $value)       
+                      <option value="{{ $value->id }}">{{ $value->namakategori }}</option>
+               @endforeach
                 </select>
               </div>
           
             <!-- /.box-header -->
             <div class="box-body pad">
               <label>Deskripsi</label>
-                <textarea value="{{$artikel->deskripsi}}" class="textarea" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                <textarea class="textarea" name="deskripsi" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{!!$artikel->deskripsi!!}</textarea>
                 <input type="hidden" name="_method" value="put">
                 <input type="hidden" name="_token" value="{{csrf_token()}}">
             </div>

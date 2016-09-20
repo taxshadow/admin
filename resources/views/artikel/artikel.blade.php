@@ -35,8 +35,8 @@
                 <tr>
                   <td>{{$artikel->id}}</td>
                   <td>{{$artikel->judulartikel}}</td>
-                  <td>{{$artikel->kategori}}</td>
-                  <td>{{$artikel->deskripsi}}</td>
+                  <td>{{$artikel->kategori_id}}</td>
+                  <td>{!! $artikel->deskripsi !!}</td>
                   <td><a href="/admin/public/app/artikel/{{$artikel->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                       
                       <form style="margin-left: 53px; margin-top: -23px;" class="" action="/admin/public/app/artikel/{{$artikel->id}}" method="post">

@@ -25,3 +25,6 @@ Route::resource('app/artikel', 'ArtikelController');
 Route::resource('app/user', 'UserController');
 
 
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
