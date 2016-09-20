@@ -34,8 +34,13 @@
                 @foreach($artikels as $artikel)
                 <tr>
                   <td>{{$artikel->id}}</td>
+
                   <td>{{$artikel->judulartikel}}</td>
                   <td>{{$artikel->kategori}}</td>
+
+                  <td><a href="/admin/public/app/artikel/{{$artikel->slug}}">{{$artikel->judulartikel}}</a></td>
+                  <td>{{$artikel->kategori_id}}</td>
+
                   <td>{!! $artikel->deskripsi !!}</td>
                   <td><a href="/admin/public/app/artikel/{{$artikel->id}}/edit"><button style="margin-right: 9px; padding-bottom: 0px; padding-top: 0px;" type="submit" class="btn btn-primary">Edit</button></a>
                       

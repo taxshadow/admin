@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Artikel;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -16,6 +17,7 @@ class ArtikelController extends Controller
      */
     public function index()
     {
+    
         $artikels = Artikel::paginate(2);
         return view('artikel.artikel', ['artikels' => $artikels]);
 
@@ -28,7 +30,8 @@ class ArtikelController extends Controller
      */
     public function create()
     {
-        return view ('artikel.insertartikel');
+        $kategoris = Kategori::all(); 
+        return view ('artikel.insertartikel', ['kategoris' => $kategoris]);
     }
 
     /**
@@ -41,15 +44,16 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
         'judulartikel' => 'required',
-        'kategori' => 'required',
+        'kategori_id' => 'required',
         'deskripsi' => 'required',
         ]);
 
         $artikels = new Artikel;
 
         $artikels->judulartikel = $request->judulartikel;
-        $artikels->kategori = $request->kategori;
+        $artikels->kategori_id = $request->kategori_id;
         $artikels->deskripsi = $request->deskripsi;
+        $artikels->slug = str_slug($request->judulartikel, '-');
         $artikels->save();
         return redirect('app/artikel')->with('message','Artikel sudah berhasil ditambahkan');
     
@@ -62,9 +66,14 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($judulartikel)
     {
-        //
+        $artikel = Artikel::where('slug', $judulartikel)->first();
+        if(!$artikel){
+            abort(503);
+        }
+        return view('artikel.single')->with('artikel', $artikel);
+
     }
 
     /**
@@ -76,8 +85,9 @@ class ArtikelController extends Controller
     public function edit($id)
     {
         $artikel = Artikel::find($id);
-
-        return view('artikel.editartikel')->with('artikel', $artikel);
+        $kategoris = Kategori::all();
+        return view('artikel.editartikel', ['kategoris' => $kategoris, 'artikel' => $artikel]);
+        
     }
 
     /**
@@ -91,14 +101,15 @@ class ArtikelController extends Controller
     {
         $this->validate($request, [
         'judulartikel' => 'required',
-        'kategori' => 'required',
+        'kategori_id' => 'required',
+        'deskripsi' => 'required',
         ]);
 
-        $artikel = Artikel::find($id);
-
-        $artikel->judulartikel = $request->judulartikel;
-        $artikel->kategori = $request->kategori;
-        $artikel->save();
+        $artikels = Artikel::find($id);
+        $artikels->judulartikel = $request->judulartikel;
+        $artikels->kategori_id = $request->kategori_id;
+        $artikels->deskripsi = $request->deskripsi;
+        $artikels->save();
         return redirect('app/artikel')->with('message','Artikel sudah berhasil diupdate');
     }
 
