@@ -12,7 +12,7 @@
 		    <form method="post" action="/admin/public/app/user">
 		    <label>Nama</label>
 			<div class="form-group has-feedback">
-			        <input type="text" name="nama" class="form-control" placeholder="Name">
+			        <input type="text" name="name" class="form-control" placeholder="Name">
 			        <span class="glyphicon glyphicon-user form-control-feedback"></span>
 			 </div>
 			 <label>Username</label>

@@ -67,7 +67,12 @@ class ArtikelController extends Controller
      */
     public function show($id)
     {
-        //
+        $artikel = Artikel::find($id);
+        if(!$artikel){
+            abort(503);
+        }
+        return view('artikel.single')->with('artikel', $artikel);
+
     }
 
     /**

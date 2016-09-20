@@ -26,5 +26,5 @@ Route::get('/app', 'AdminController@login');
 Route::resource('app/kategori', 'KategoriController');
 Route::resource('app/artikel', 'ArtikelController');
 Route::resource('app/user', 'UserController');
-Route::auth();
+
 

@@ -11,7 +11,7 @@
 		    <form action="/admin/public/app/user/{{$user->id}}" method="post">
 		    <label>Nama</label>
 			<div class="form-group has-feedback">
-			        <input type="text" name="nama" value="{{$user->nama}}" class="form-control" placeholder="Name">
+			        <input type="text" name="name" value="{{$user->name}}" class="form-control" placeholder="Name">
 			        <span class="glyphicon glyphicon-user form-control-feedback"></span>
 			 </div>
 			 <label>Username</label>
