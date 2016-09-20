@@ -53,6 +53,7 @@ class ArtikelController extends Controller
         $artikels->judulartikel = $request->judulartikel;
         $artikels->kategori_id = $request->kategori_id;
         $artikels->deskripsi = $request->deskripsi;
+        $artikels->slug = str_slug($request->judulartikel, '-');
         $artikels->save();
         return redirect('app/artikel')->with('message','Artikel sudah berhasil ditambahkan');
     
@@ -65,9 +66,9 @@ class ArtikelController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($judulartikel)
     {
-        $artikel = Artikel::find($id);
+        $artikel = Artikel::where('slug', $judulartikel)->first();
         if(!$artikel){
             abort(503);
         }
