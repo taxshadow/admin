@@ -12,18 +12,20 @@
 		    <form method="post" action="/admin/public/app/user">
 		    <label>Nama</label>
 			<div class="form-group has-feedback">
-			        <input type="text" name="name" class="form-control" placeholder="Name">
+			        <input type="text" name="nama" class="form-control" placeholder="Name">
 			        <span class="glyphicon glyphicon-user form-control-feedback"></span>
 			 </div>
 			 <label>Username</label>
 		     <div class="form-group has-feedback">
 		        	<input type="text" name="username" class="form-control" placeholder="Username">
 		        	<span class="glyphicon glyphicon-user form-control-feedback"></span>
+		        	{{($errors->has('username')) ? $errors->first('username') : ''}}
 		     </div>
 		     <label>Email</label>
 		     <div class="form-group has-feedback">
 		        	<input type="email" name="email" class="form-control" placeholder="Email">
 		        	<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+		        	{{($errors->has('email')) ? $errors->first('email') : ''}}
 		     </div>
 		     <label>Password</label>
 		     <div class="form-group has-feedback">
