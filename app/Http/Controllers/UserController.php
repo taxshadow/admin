@@ -72,14 +72,7 @@ class UserController extends Controller
     public function edit($user_id)
     {
         $user = Users::find($user_id);
-        return view('user.edit')->with('user', $user);;
-    // public function edit($user_id)
-    // {
-      
-    //     $user = Users::find($user_id);
-
-    //     return view('user.edit')->with('user', $user);
-
+        return view('user.edit')->with('user', $user);
     }
 
     /**
@@ -92,22 +85,10 @@ class UserController extends Controller
     public function update(Request $request, $user_id)
     {
         $user = Users::find($user_id);
-
-        $user = Users::find($user_id);;
         $user->nama = $request->nama;
         $user->username = $request->username;
         $user->password = $request->password;
         $user->email = $request->email;
-
-
-        // $user = Users::find($user_id);
-
-        // $user->nama = $request->nama;
-        // $user->username = $request->username;
-        // $user->email = $request->email;
-        // $user->password = $request->password;
-
-
         $user->save();
         return redirect('app/user');
     }
@@ -120,9 +101,6 @@ class UserController extends Controller
      */
     public function destroy($user_id)
     {
-        // die('hard');
-        $user = Users::find($user_id);
-
         $user = Users::find($user_id);
         $user->delete();
         return redirect('app/user');
